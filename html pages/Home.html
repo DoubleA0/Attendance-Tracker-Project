@@ -9,41 +9,33 @@
 <body>
     <h1>Attendance Records</h1>
     <table border="1">
-        <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Present</th>
-            <th>Actions</th>
-        </tr>
-        {% for record in records %}
-        <tr>
-            <form action="{{ url_for('edit', id=record.id) }}" method="post">
-                <td><input type="text" name="firstName" value="{{ record.firstName }}"></td>
-                <td><input type="text" name="lastName" value="{{ record.lastName }}"></td>
-                <td><input type="date" name="date" value="{{ record.date }}"></td>
-                <td><input type="time" name="time" value="{{ record.time }}"></td>
-                <td><input type="checkbox" name="present" {% if record.present %}checked{% endif %}></td>
-                <td>
-                    <button type="submit">Save</button>
-                    <a href="{{ url_for('delete', id=record.id) }}">Delete</a>
-                </td>
-            </form>
-        </tr>
-        {% endfor %}
-        <tr>
-            <form action="{{ url_for('add') }}" method="post">
-                <td><input type="text" name="firstName"></td>
-                <td><input type="text" name="lastName"></td>
-                <td><input type="date" name="date"></td>
-                <td><input type="time" name="time"></td>
-                <td><input type="checkbox" name="present"></td>
-                <td><button type="submit">Add</button></td>
-            </form>
-        </tr>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Present</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="recordsTable">
+            <!-- Table rows will be dynamically populated -->
+        </tbody>
+        <tfoot>
+            <tr>
+                <form id="addRecordForm">
+                    <td><input type="text" name="firstName" required></td>
+                    <td><input type="text" name="lastName" required></td>
+                    <td><input type="date" name="date" required></td>
+                    <td><input type="time" name="time" required></td>
+                    <td><input type="checkbox" name="present"></td>
+                    <td><button type="submit">Add</button></td>
+                </form>
+            </tr>
+        </tfoot>
     </table>
     <button id="logoutButton">Log Out</button>
-    <script src="script.js"></script>
+    <script src="Home.js" type="module"></script>
 </body>
 </html>
