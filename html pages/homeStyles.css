@@ -3,11 +3,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
 }
 
 /* Page styling */
 body {
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,8 +17,27 @@ body {
     padding: 20px;
 }
 
-h1 {
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 2px solid #ddd;
     margin-bottom: 20px;
+}
+
+header img {
+   
+        width: 100px; /* Reduced width of the logo */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 10px;
+
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
     color: #333;
 }
 
@@ -27,6 +47,7 @@ table {
     max-width: 800px;
     border-collapse: collapse;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 table, th, td {
@@ -39,7 +60,7 @@ th, td {
 }
 
 th {
-    background-color: #4CAF50;
+    background-color: #bb3b3b;
     color: white;
 }
 
@@ -49,6 +70,11 @@ tr:nth-child(even) {
 
 tr:hover {
     background-color: #f1f1f1;
+}
+
+/* Centering table */
+table {
+    margin: 0 auto;
 }
 
 /* Input styling */
@@ -74,6 +100,7 @@ button {
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
+    margin-bottom: 10px;
 }
 
 button:hover {
@@ -89,6 +116,21 @@ a {
 
 a:hover {
     color: #ff1a1a;
+}
+
+/* Logout button */
+#logoutButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #8a8a8a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#logoutButton:hover {
+    background-color: #c9302c;
 }
 
 /* Form styling for Add row */
