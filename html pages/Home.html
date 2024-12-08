@@ -3,15 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="homeStyles.css">
+    <!--<link rel="stylesheet" href="homeStyles.css">-->
     <script src="Home.js"></script>
+    
     <title>Attendance Records</title>
 </head>
+
 <body>
     <header>
         <img src="canvas.png" 
         alt="Canvas logo">
     </header>
+    <label for="classSelect">Select a class:</label>
+    <select id="classSelect">
+        <option value="">--Select a class--</option>
+        <option value="class1">Class 1</option>
+        <option value="class2">Class 2</option>
+        <option value="class3">Class 3</option>
+        <!-- Add more classes as needed -->
+    </select>
+
+    <div id="rosterContainer">
+        <!-- Roster will be displayed here -->
+    </div>
+
+    <script src="test.js"></script>
+    <!--
     <h1>Attendance Records</h1>
     <h2>CSCI 380</h2>
     <table border="1">
@@ -27,7 +44,7 @@
             </tr>
         </thead>
         <tbody id="recordsTable">
-            <!-- Table rows will be dynamically populated -->
+            !-- Table rows will be dynamically populated --
         </tbody>
         <tfoot>
             <tr>
@@ -43,7 +60,9 @@
             </tr>
         </tfoot>
     </table>
+-->
     <button id="logoutButton">Log Out</button>
+    
     
 </body>
 </html>
