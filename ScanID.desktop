@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=ScanID
+Exec=/home/pi/NFC/env/bin/python /home/pi/NFC/Scan_ID.py
+Terminal=False
+StartupNotify=true
